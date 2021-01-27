@@ -41,7 +41,6 @@
                         key={props.indexx+'input'}
                         value={text}
                         onChange={(e)=>{
-                                if(text !== '')
                                 setText(e.target.value)
                         }}/>
                         </td>
@@ -92,6 +91,7 @@
                                             id='todo' 
                                             value={text}
                                             onChange={(e)=>{
+                                                
                                                 setText(e.target.value)
                                             }}/>
                                         </div>
@@ -99,7 +99,7 @@
                                     <div className="row mt-5 mb-5 justify-content-center">
                                         <div className="col-sm-6 text-center">
                                             <button className="btn btn-primary" onClick={() => {
-                                                appendTodo()
+                                                (text !== '') ? appendTodo() : alert('Please fill todo name')
                                             }}>ADD TODO</button>
                                         </div>
                                     </div>
