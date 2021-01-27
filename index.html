@@ -41,6 +41,7 @@
                         key={props.indexx+'input'}
                         value={text}
                         onChange={(e)=>{
+                                if(text !== '')
                                 setText(e.target.value)
                         }}/>
                         </td>
